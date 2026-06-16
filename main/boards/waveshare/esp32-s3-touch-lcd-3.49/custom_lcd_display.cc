@@ -99,7 +99,7 @@ CustomLcdDisplay::CustomLcdDisplay(esp_lcd_panel_io_handle_t panel_io, esp_lcd_p
                   int width, int height, int offset_x, int offset_y,
                   bool mirror_x, bool mirror_y, bool swap_xy)
     : LcdDisplay(panel_io, panel, width, height) {
-
+esp_lcd_panel_set_gap(panel, offset_x, offset_y);
     ESP_LOGI(TAG, "Initialize LVGL library");
     lv_init();
 
